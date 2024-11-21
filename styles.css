@@ -351,3 +351,79 @@ footer i {
         opacity: 0.5;
     }
 }
+
+#alarm-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #f44336;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+#alarm-notification.active {
+    display: block;
+}
+
+.notification-content button {
+    background-color: #4caf50;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* General styling for the reminder container */
+.reminder-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+.reminder-container label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Styling for the select dropdown */
+.reminder-container select {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover effect for the select dropdown */
+.reminder-container select:hover {
+    border-color: #4CAF50;
+}
+
+/* Focus effect for the select dropdown */
+.reminder-container select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Optional: Add styling for the options inside the select */
+.reminder-container select option {
+    padding: 10px;
+    font-size: 16px;
+}

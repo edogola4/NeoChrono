@@ -24,34 +24,42 @@
         <div class="clock">
             <div class="digital-display">
                 <!-- Separate span elements for hours, minutes, and seconds -->
-                <span class="hour" id="hour">00</span>:<span class="minute" id="minute">00</span>:<span class="second"
-                    id="second">00</span>
+                <span class="hour" id="hour">00</span>:<span class="minute" id="minute">00</span>:<span class="second" id="second">00</span>
             </div>
         </div>
 
         <!-- Alarm Section -->
-       <!-- Alarm Section -->
-<div class="alarm-container">
-    <div class="alarm-header">
-        <h2><i class="fa-solid fa-bell"></i> Alarm Settings</h2>
-    </div>
-    <div class="alarm-content">
-        <label for="alarm-time">Set Alarm:</label>
-        <input type="time" id="alarm-time">
-        <button id="set-alarm"><i class="fa-solid fa-check"></i> Set Alarm</button>
-    </div>
-    <p id="alarm-message" class="alarm-message"></p>
-</div>
+        <div class="alarm-container">
+            <div class="alarm-header">
+                <h2><i class="fa-solid fa-bell"></i> Alarm Settings</h2>
+            </div>
+            <div class="alarm-content">
+                <label for="alarm-time">Set Alarm:</label>
+                <input type="time" id="alarm-time">
+                <button id="set-alarm"><i class="fa-solid fa-check"></i> Set Alarm</button>
+            </div>
+            <p id="alarm-message" class="alarm-message"></p>
 
-<!-- Alarm Notification (hidden by default) -->
-<div id="alarm-notification">
-    Alarm is ringing! 
-    <button id="dismiss-alarm">Dismiss</button>
-</div>
+            <!-- Reminder Time --
+            <div class="reminder-container">
+                <label for="reminder-time">Reminder Time:</label>
+                <select id="reminder-time">
+                    <option value="0">No Reminder</option>
+                    <option value="5">5 Minutes Before</option>
+                    <option value="10">10 Minutes Before</option>
+                    <option value="15">15 Minutes Before</option>
+                </select>
+            </div>
+        </div>-->
 
+        <!-- Alarm Notification (hidden by default) -->
+        <div id="alarm-notification">
+            Alarm is ringing! 
+            <button id="dismiss-alarm">Dismiss</button>
+        </div>
     </main>
 
-    <!---- <footer>
+    <!--<footer>
         <p>&copy; 2024 Brandon's Digital Clock | Made with <i class="fa-solid fa-heart"></i> and JavaScript</p>
     </footer>-->
 
