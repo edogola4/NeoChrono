@@ -31,3 +31,23 @@
 - **Responsive Design:**
 *Adapts to various screen sizes, making it ideal for desktop and mobile displays.*
 
+## How It Works
+- **Real-Time Clock:**
+JavaScript updates the time display dynamically every second using setInterval().
+
+- **Styling:**
+CSS handles the modern aesthetic with clean typography, gradients, and animations.
+
+## Key Selectors
+- **Clock Components:**
+- Hours Display: .hours
+- Minutes Display: .minutes
+- Seconds Display: .seconds
+
+##  Technology Stack:
+- *The Digital Watch project uses the following technologies:*
+
+- **Frontend:**
+- **HTML5:** For the clock structure.
+- **CSS3:** For styling, layout, and animations.
+- **JavaScript:** For time calculations and dynamic updates.
