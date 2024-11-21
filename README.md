@@ -16,7 +16,7 @@
 - **7. License**
 
   ## Digital Watch Features:
-  - **Real-Time Digital Display:**
+- **Real-Time Digital Display:**
 *Shows hours, minutes, and seconds in an animated format.*
 
 - **Dynamic Time Updates:**
