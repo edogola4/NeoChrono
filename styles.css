@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e2a47, #4c6cb4);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #152b4a, #1f4788);
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+header:hover {
+    background: linear-gradient(45deg, #1f4788, #2a5fa8);
+    transform: scale(1.02);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: slideInDown 1s ease;
+}
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+/* Main Layout */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #a2b6f2, #e5e8f5);
+    gap: 0px;
+    padding: 20px;
+}
+/* Main Layout */
+
+/* Greeting *
+.greeting {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}*/
+.greeting {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 800;
+    background: linear-gradient(45deg, #2196f3, #e91e63);
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1.5s ease;
+    transition: transform 0.3s ease;
+}
+.greeting:hover {
+    background: linear-gradient(45deg, #b1fa28, #2a5fa8);
+    transform: scale(1.02);
+}
+@keyframes bounceIn {
+    0%, 100% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+/* Digital Clock Styling */
+.clock {
+    background: rgba(8, 8, 8, 0.5);
+    border-radius: 10px;
+    padding: 30px 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.digital-display {
+    font-size: 6rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: blink 1s infinite step-start;
+}
+
+/* Alarm Section */
+.alarm-container {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.alarm-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.alarm-content label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="time"] {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+button {
+    background-color: #034bf5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3a5b8d;
+}
+
+.alarm-message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+footer i {
+    color: red;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
