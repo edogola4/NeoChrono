@@ -106,7 +106,7 @@ main {
         transform: scale(1.1);
     }
 }
-/* Digital Clock Styling */
+/* Digital Clock Styling *
 .clock {
     background: rgba(8, 8, 8, 0.5);
     border-radius: 10px;
@@ -123,7 +123,57 @@ main {
     letter-spacing: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     animation: blink 1s infinite step-start;
+}*/
+/* Digital Clock Styling */
+.clock {
+    background: rgba(8, 8, 8, 0.5);
+    border-radius: 10px;
+    padding: 30px 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
+
+/* General Digital Display Styling */
+.digital-display {
+    font-size: 6rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: blink 1s infinite step-start;
+}
+
+/* Hour Styling */
+.hour {
+    color: rgb(255, 99, 71); /* Tomato Red */
+    text-shadow: 0 0 15px rgba(255, 99, 71, 0.6);
+}
+
+/* Minute Styling */
+.minute {
+    color: rgb(70, 130, 180); /* Steel Blue */
+    text-shadow: 0 0 15px rgba(70, 130, 180, 0.6);
+}
+
+/* Second Styling */
+.second {
+    color: rgb(34, 193, 195); /* Turquoise */
+    text-shadow: 0 0 15px rgba(34, 193, 195, 0.6);
+}
+
+/* Animation for Fade-in Effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animation for Blinking Effect */
+@keyframes blink {
+    50% { visibility: hidden; }
+    100% { visibility: visible; }
+}
+
 
 /* Alarm Section */
 .alarm-container {

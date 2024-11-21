@@ -1,5 +1,8 @@
-// Selectors
-const digitalTimeDisplay = document.getElementById("digital-time");
+// Selectors for each part of the digital clock
+const hourElement = document.getElementById("hour");
+const minuteElement = document.getElementById("minute");
+const secondElement = document.getElementById("second");
+
 const greeting = document.getElementById("greeting");
 const alarmInput = document.getElementById("alarm-time");
 const setAlarmButton = document.getElementById("set-alarm");
@@ -31,19 +34,16 @@ function updateClock() {
     const minutes = String(now.getMinutes()).padStart(2, "0");
     const seconds = String(now.getSeconds()).padStart(2, "0");
 
-    digitalTimeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+    // Update each part of the clock individually
+    hourElement.textContent = hours;
+    minuteElement.textContent = minutes;
+    secondElement.textContent = seconds;
 
     updateGreeting(now.getHours());
     checkAlarm(now);
 }
 
 // Function to Update Greeting
-// Function to update the greeting message based on the time of day
-// Takes the current hour (0-23) as a parameter
-// Sets greeting text to:
-// - "Good Morning!" for hours 0-11 (midnight to 11:59 AM)
-// - "Good Afternoon!" for hours 12-17 (noon to 5:59 PM)
-// - "Good Evening!" for hours 18-23 (6 PM to 11:59 PM)
 function updateGreeting(hour) {
     if (hour < 12) {
         greeting.textContent = "Good Morning!";
