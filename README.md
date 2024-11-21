@@ -64,3 +64,9 @@ Modular codebase for easy customization and feature additions.
 - **Dark Mode:** Introduce a toggle for light and dark themes.
 - **Stopwatch/Timer:** Add stopwatch and countdown timer functionality.
 
+## Usage Scenarios:
+ - Keep track of time in a stylish way.
+  - Explore dynamic UI design and animation techniques.
+   - Customize the watch for personal or professional projects.
+## Contributing
+Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request. Suggestions and issue reports are also appreciated.
