@@ -152,7 +152,7 @@ main {
 
 /* Minute Styling */
 .minute {
-    color: rgb(70, 130, 180); /* Steel Blue */
+    color: rgb(11, 138, 241); /* Steel Blue */
     text-shadow: 0 0 15px rgba(70, 130, 180, 0.6);
 }
 
@@ -198,14 +198,47 @@ main {
     margin-bottom: 10px;
 }
 
-input[type="time"] {
+/*input[type="time"] {
     padding: 10px;
     font-size: 1.2rem;
     width: 80%;
     border-radius: 5px;
     margin-bottom: 20px;
     border: none;
+}*/
+input[type="time"] {
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    width: 80%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc; /* Light gray border */
+    background-color: #f4f4f4; /* Soft background color */
+    color: #333; /* Darker text for better contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition effect */
 }
+
+/* Focus effect */
+input[type="time"]:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    background-color: #fff; /* White background on focus */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); /* Green shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Placeholder text style */
+input[type="time"]::placeholder {
+    color: #999; /* Light gray color for placeholder */
+    font-style: italic; /* Slightly italicized placeholder */
+}
+
+/* Styling for hover */
+input[type="time"]:hover {
+    border-color: #4CAF50; /* Green border on hover */
+    background-color: #e8f5e9; /* Light green background on hover */
+}
+
 
 button {
     background-color: #034bf5;
@@ -225,6 +258,56 @@ button:hover {
 .alarm-message {
     font-size: 1.2rem;
     margin-top: 10px;
+}
+/**added*/
+/* Alarm Notification */
+#alarm-notification {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4d4d; /* Red background to grab attention */
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Active state when alarm is triggered */
+#alarm-notification.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Fade-out effect after some time */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Additional styles for the button or interaction elements */
+#dismiss-alarm {
+    background-color: #4CAF50; /* Green button for dismiss */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#dismiss-alarm:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
 }
 
 /* Footer Styling */

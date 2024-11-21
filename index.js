@@ -25,6 +25,7 @@ document.querySelector(".alarm-container").append(snoozeButton, stopButton);
 
 let alarmTime = null;
 let alarmTimeout = null;
+let reminderTimeout = null; // Variable to store reminder timeout
 
 // Function to Update Digital Clock
 function updateClock() {
@@ -61,11 +62,16 @@ setAlarmButton.addEventListener("click", () => {
         alarmTime = alarmValue;
         alarmMessage.textContent = `Alarm set for ${alarmTime}`;
         alarmMessage.style.color = "#de5337"; // Success color
+        setReminder(alarmValue); // Set the reminder when alarm is set
     } else {
         alarmMessage.textContent = "Please select a valid time.";
         alarmMessage.style.color = "#e91e63"; // Error color
     }
 });
+
+// Select the alarm notification element and dismiss button
+const alarmNotification = document.getElementById("alarm-notification");
+const dismissButton = document.getElementById("dismiss-alarm");
 
 // Function to Check Alarm
 function checkAlarm(now) {
@@ -80,6 +86,63 @@ function checkAlarm(now) {
             triggerAlarm();
         }
     }
+}
+
+// Function to Set Reminder for Alarm
+function setReminder(alarmTime) {
+    // Clear previous reminder if any
+    if (reminderTimeout) {
+        clearTimeout(reminderTimeout);
+    }
+
+    const [alarmHour, alarmMinute] = alarmTime.split(":").map(Number);
+    const now = new Date();
+    const alarmDate = new Date();
+    alarmDate.setHours(alarmHour, alarmMinute, 0, 0);
+
+    // Set reminder for 5 minutes before the alarm
+    const reminderTime = alarmDate.getTime() - now.getTime() - 5 * 60 * 1000; // 5 minutes before
+
+    if (reminderTime > 0) {
+        reminderTimeout = setTimeout(() => {
+            alarmMessage.textContent = `Reminder: Your alarm will ring in 5 minutes.`;
+            alarmMessage.style.color = "#ff9800"; // Reminder color
+        }, reminderTime);
+    }
+}
+
+// Function to Trigger Alarm and Display Notification
+function triggerAlarm() {
+    // Display the notification
+    alarmNotification.classList.add("active");
+
+    // Dismiss the alarm after a few seconds (e.g., 5 seconds)
+    setTimeout(() => {
+        alarmNotification.classList.remove("active");
+    }, 5000); // Notification fades out after 5 seconds
+
+    // You can also play the alarm sound or execute other alarm-related actions here.
+    playAlarmSound();
+}
+
+// Create a dismiss button functionality
+dismissButton.addEventListener("click", () => {
+    alarmNotification.classList.remove("active");
+    stopAlarmSound(); // Stop the alarm sound if active
+});
+
+// Function to Play Alarm Sound
+function playAlarmSound() {
+    const audio = new Audio("./audio/alarm.mp3");
+    audio.loop = true; // Repeat sound until stopped
+    audio.play();
+}
+
+// Function to Stop Alarm Sound
+function stopAlarmSound() {
+    const audio = new Audio("./audio/alarm.mp3");
+    audio.pause();
+    audio.currentTime = 0; // Reset sound to the beginning
 }
 
 // Function to Trigger Alarm
