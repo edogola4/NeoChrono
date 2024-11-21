@@ -1,2 +1,7 @@
 # NeoChrono
-A sleek and interactive animated digital clock built with HTML, CSS, and JavaScript. Featuring smooth animations and real-time updates, it provides a visually engaging way to display time. This project highlights time-based animations and responsive design, making it a perfect exploration of modern web development techniques.
+
+![Preview](./assets/preview.png)
+
+## Personalized Animated Digital Watch
+
+- *An interactive and visually appealing digital watch (digital-watch) that displays the current time in a sleek format. The project features dynamic time-based updates, smooth animations, and a customizable design. Built with HTML, CSS, and JavaScript, it serves as a modern example of interactive web design.*
